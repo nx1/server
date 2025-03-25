@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}nx1.info | Server{% endblock %}
+{% block content %}
+<pre>
+System Information:
+=============================================
+{{ system_info }}
+=============================================
+
+Tools:
+<a href="{{ url_for('digger') }}">Discogs Digger</a>
+</pre>
+{% endblock %}
+</pre>
+</body>
+</html>

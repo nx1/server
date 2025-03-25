@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}nx1.info | Server | Discogs Digger{% endblock %}
+{% block content %}
+<pre>
+<h2>Discogs Digger</h2>
+</pre>
+<form method="GET" action="/search">
+    <div>
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search" placeholder="Enter search terms" required>
+    </div>
+
+    <div>
+        <label for="style">Style:</label>
+        <select id="style" name="style">
+            <option value="">--Select Style--</option>
+            <option value="Psy-Trance">Psy-Trance</option>
+            <option value="Progressive Trance">Progressive Trance</option>
+            <option value="Techno">Techno</option>
+            <option value="House">House</option>
+            <option value="Rock">Rock</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="format">Format:</label>
+        <select id="format" name="format">
+            <option value="">--Select Format--</option>
+            <option value="Album">Album</option>
+            <option value="Single">Single</option>
+            <option value="EP">EP</option>
+            <option value="Compilation">Compilation</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year" placeholder="e.g. 2000-2009" pattern="\d{4}-\d{4}" title="Year format: YYYY-YYYY">
+    </div>
+
+    <div>
+        <label for="sort">Sort by:</label>
+        <select id="sort" name="sort">
+            <option value="relevance">Relevance</option>
+            <option value="year">Year</option>
+            <option value="title">Title</option>
+            <option value="have">Have</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="sort_order">Sort order:</label>
+        <select id="sort_order" name="sort_order">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="per_page">Results per page:</label>
+        <select id="per_page" name="per_page">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="include_community">Include Community:</label>
+        <input type="checkbox" id="include_community" name="include_community" value="1">
+    </div>
+
+    <div>
+        <button type="submit">Search</button>
+    </div>
+</form>
+
+</pre>
+{% endblock %}
+
