@@ -7,12 +7,26 @@ discogs = Discogs()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    tracks =[]
-    artist_name = ''
+    tracks = []
+    query = ''
+    search_type = 'artist'
+    
     if request.method == 'POST':
-        artist_name = request.form.get('artist', '')
-        tracks = discogs.search_artist_tracks(artist_name)
-    return render_template('digger.html', tracks=tracks, artist_name=artist_name)
+        query = request.form.get('query', '')
+        search_type = request.form.get('search_type', 'artist')
+        
+        if query:
+            if search_type == 'artist':
+                tracks = discogs.search_artist_tracks(query)
+            else:
+                tracks = discogs.search_label_tracks(query)
+    
+    return render_template('digger.html', 
+                         tracks=tracks, 
+                         query=query,
+                         search_type=search_type)
 
 if __name__ == '__main__':
+    # Create templates directory if it doesn't exist
+    os.makedirs('templates', exist_ok=True)
     app.run(debug=True)
