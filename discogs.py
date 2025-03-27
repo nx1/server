@@ -11,25 +11,20 @@ class Discogs:
     def get(self, url, **kwargs):
         params = {"token": self.token, **kwargs}
         response = requests.get(url, headers=self.headers, params=params)
+
         if response.status_code != 200:
             print(f"Error: {response.status_code} {response.text}")
 
-        # check rate limit
-        if response.headers.get('x-discogs-ratelimit-remaining') == '0':
+        if response.headers.get('x-discogs-ratelimit-remaining') == '5':
             print(f"Rate limit exceeded, sleeping for 60 seconds")
             time.sleep(60)
         return response
 
-    def search(self, **kwargs):
+    def search(self, per_page=100, **kwargs):
         base_url = 'https://api.discogs.com/database/search'
-
-        pagination = {'page': 1,
-                      'per_page': 100}
-
-        params = {"token": self.token,
-                  **pagination,
-                  **kwargs}
-        response = self.get(base_url, params=params)
+        pagination = {'page': 1, 'per_page': per_page}
+        params     = {**pagination, **kwargs}
+        response   = self.get(base_url, **params)
         return response.json()
     
 
@@ -59,7 +54,7 @@ class Discogs:
             response = self.get(url=base_url, params=params)
             data = response.json()
             all_releases.extend(data['releases'])
-            print(f"Got {len(data['releases'])} releases")
+        print(f"Got {len(all_releases)} releases")
         return all_releases
 
     def get_release_tracks(self, release_id):
@@ -72,36 +67,22 @@ class Discogs:
     def get_artist_tracks(self, artist_id):
         print(f"Getting artist tracks for {artist_id}")
         releases = self.get_artist_releases(artist_id)
-        all_tracks = []
-        print(f"Got {len(releases)} releases")
 
+        all_tracks = []
         for release in releases:
             print(f"Processing release {release['id']}")
             if release.get('type') == 'master':
                 continue
-                
-            tracks = self.get_release_tracks(release['id'])
+            tracks = self.get_release_tracks(release_id=release['id'])
             for track in tracks:
+                track['release'] = release # Add the release to the track
                 if 'artists' in track:
                     # If the track has multiple artists, only include if our artist is one of them
                     if any(artist['id'] == artist_id for artist in track['artists']):
-                        all_tracks.append({
-                            'title'    : track['title'],
-                            'release'  : release['title'],
-                            'year'     : release.get('year'),
-                            'position' : track.get('position'),
-                            'duration' : track.get('duration'),
-                            'type'     : track.get('type_')
-                        })
+                        all_tracks.append(track)
                 else:
-                    all_tracks.append({
-                        'title'    : track['title'],
-                        'release'  : release['title'],
-                        'year'     : release.get('year'),
-                        'position' : track.get('position'),
-                        'duration' : track.get('duration'),
-                        'type'     : track.get('type_')
-                    })
+                    all_tracks.append(track)
+
         print(f"Got {len(all_tracks)} tracks")
         return all_tracks
 
@@ -131,10 +112,16 @@ class Discogs:
         all_tracks = []
         for i, release in enumerate(releases):
             print(f"Getting release tracks for {release['id']} ({i+1}/{len(releases)})")
-            tracks = self.get_release_tracks(release['id'])
+            tracks = self.get_release_tracks(release_id=release['id'])
             all_tracks.extend(tracks)
         print(f"Got {len(all_tracks)} tracks")
         return all_tracks
+
+    def search_artist_tracks(self, artist_name):
+        search_results = self.search(query=artist_name, type='artist', per_page=1)
+        artist_id = search_results['results'][0]['id']
+        tracks = self.get_artist_tracks(artist_id)
+        return tracks
 
 
 if __name__ == "__main__":
