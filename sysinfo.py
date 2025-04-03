@@ -18,7 +18,7 @@ class SystemInfo:
         self.mem_total       = self.memory.total / (1024 ** 3)
         self.mem_percent     = self.memory.percent
         self.temps           = psutil.sensors_temperatures()
-        self.cpu_temp        = self.temps["cpu_thermal"][0].current
+        self.cpu_temp        = self.get_cpu_temp()
         self.disk            = psutil.disk_usage('/')
         self.disk_used       = self.disk.used / (1024 ** 3)
         self.disk_free       = self.disk.free / (1024 ** 3)
@@ -29,6 +29,13 @@ class SystemInfo:
         self.net_recv        = self.net.bytes_recv / (1024 ** 2)
         self.net_con         = psutil.net_connections()
 
+    def get_cpu_temp(self):
+        temps = psutil.sensors_temperatures()
+        if 'cpu_thermal' in temps:
+            return temps['cpu_thermal'][0].current
+        else:
+            return None
+
     def __repr__(self):
         return (
             f"Hostname:        {self.hostname}\n"
@@ -36,9 +43,13 @@ class SystemInfo:
             f"Python Version:  {self.python_version}\n"
             f"Connected Users: {self.connected_users}\n"
             f"CPU Usage:       {self.cpu_percent}%\n"
-            f"CPU Frequency:   {self.cpu_freq} MHz\n"
+            f"CPU Frequency:   {self.cpu_freq:.0f} MHz\n"
             f"CPU Temperature: {self.cpu_temp} °C\n"
             f"Memory:          {self.mem_used:.2f} / {self.mem_total:.2f} GB ({self.mem_percent:.2f}%)\n"
-            f"Disk:            {self.disk_used:.2f} / {self.disk_total:.2f} GB ({self.disk_percent:.2f}%)\n"
+            f"Disk Space:      {self.disk_used:.2f} / {self.disk_total:.2f} GB ({self.disk_percent:.2f}%)\n"
+            f"Disk Free:       {self.disk_free:.2f} GB\n"
             f"Network:         Up: {self.net_sent:.2f} Mb Down: {self.net_recv:.2f} Mb\n"
         )
+
+if __name__ == "__main__":
+    print(SystemInfo())

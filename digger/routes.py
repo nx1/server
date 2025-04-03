@@ -1,8 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Blueprint, render_template, request
 from discogs import Discogs
-import os
 
-app = Flask(__name__)
+# Create a blueprint for the routes
+app = Blueprint('routes', __name__)
 discogs = Discogs()
 
 @app.route('/', methods=['GET', 'POST'])
@@ -21,10 +21,4 @@ def index():
             else:
                 tracks = discogs.search_label_tracks(query)
     
-    return render_template('digger.html', 
-                         tracks=tracks, 
-                         query=query,
-                         search_type=search_type)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    return render_template('digger.html', tracks=tracks, query=query, search_type=search_type) 

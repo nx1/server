@@ -15,7 +15,7 @@ class Discogs:
         if response.status_code != 200:
             print(f"Error: {response.status_code} {response.text}")
 
-        if response.headers.get('x-discogs-ratelimit-remaining') == '5':
+        if response.headers.get('x-discogs-ratelimit-remaining') == '1':
             print(f"Rate limit exceeded, sleeping for 60 seconds")
             time.sleep(60)
         return response
@@ -26,6 +26,7 @@ class Discogs:
         params     = {**pagination, **kwargs}
         response   = self.get(base_url, **params)
         return response.json()
+
 
 
     def get_artist_releases(self, artist_id, sort='year', sort_order='desc'):
@@ -53,12 +54,14 @@ class Discogs:
         print(f"Got {len(all_releases)} releases")
         return all_releases
 
-    def get_release_tracks(self, release_id):
+    def get_release(self, release_id):
         base_url = f'https://api.discogs.com/releases/{release_id}'
-        params = {"token": self.token}
-        response = self.get(url=base_url, params=params)
-        data = response.json()
-        return data.get('tracklist', [])
+        response = self.get(base_url)
+        return response.json()
+
+    def get_release_tracks(self, release_id):
+        release = self.get_release(release_id)
+        return release.get('tracklist', [])
     
     def get_master_tracks(self, master_id):
         pass
@@ -142,7 +145,10 @@ class Discogs:
 
 if __name__ == "__main__":
     d = Discogs()
-
+    release = d.get_release(108713)
+    videos = release['videos']
+    for video in videos:
+        print(video)
 
     # data = d.search(
     #    style="Psy-Trance,Progressive Trance",
@@ -153,10 +159,14 @@ if __name__ == "__main__":
     #    )
     # print(data)
 
-    #artist_id = 108713  # Example artist ID
-    #d.get_artist_releases(artist_id)
+    # artist_id = 108713  
+    # d.get_artist_releases(artist_id)
+    # print(d)
+
+
 
     # tracks = d.get_release_tracks(108713)
+    # print(tracks)
     # for track in tracks:
     #     print(track)
 
