@@ -48,7 +48,7 @@ class SystemInfo:
             f"Memory:          {self.mem_used:.2f} / {self.mem_total:.2f} GB ({self.mem_percent:.2f}%)\n"
             f"Disk Space:      {self.disk_used:.2f} / {self.disk_total:.2f} GB ({self.disk_percent:.2f}%)\n"
             f"Disk Free:       {self.disk_free:.2f} GB\n"
-            f"Network:         Up: {self.net_sent:.2f} Mb Down: {self.net_recv:.2f} Mb\n"
+            f"Network:         Up: {self.net_sent:.2f} Mb Down: {self.net_recv:.2f} Mb"
         )
 
 if __name__ == "__main__":

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}nx1.info | Module Inspector{% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content: space-between; gap: 1%; margin-bottom: 20px; font-family: monospace; font-size: 12px;">
+<div style="max-height: 700px; width: 20%; overflow-y: auto; background-color: #1a1a1a; padding: 10px; border-radius: 3px;">
+<h2 class="text-white">Installed Modules ({{ installed_modules|length }})</h2>
+<div style="display: flex; flex-direction: column; gap: 5px;">
+{% for m in installed_modules %}
+<a href="{{ url_for('inspector.routes.view_module', module=m) }}">{{ m }}</a>
+{% endfor %}
+</div>
+</div>
+
+<div style="max-height: 700px; width: 80%; overflow-y: auto; background-color: #1a1a1a; padding: 15px; border-radius: 3px;">
+<h2 class="text-white">Inspect Results</h2>
+<div>
+    <table style="border-collapse: collapse; border: none;">
+        {% if inspect_res %}
+          {% for res in inspect_res %}
+            <tr>
+              <td>{{ res['k'] }}</td>
+              <td>{{ res['v'] }}</td>
+            </tr>
+          {% endfor %}
+        {% else %}
+          <tr>
+            <td>No inspection results found.</td>
+          </tr>
+        {% endif %}
+      </table>
+</div>
+</div>
+</div>
+{% endblock %}

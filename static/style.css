@@ -3,16 +3,16 @@ body {
 	color: white;
 }
 a {
-	color: white;
+	color: rgb(0, 255, 0);
 	text-decoration: none;
-}
+
 a:visited {
-	color: #D3D3D3;
+	color: #008b00;
 }
 a:hover {
 	color: #F5F5F5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: -1.0em;
+  margin-bottom: -0.0em;
 }
