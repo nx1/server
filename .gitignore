@@ -1,0 +1,53 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+ENV/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Local env files
+.env
+
+# OS files
+.DS_Store
+
+
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   digger/__init__.py
+        modified:   digger/routes.py
+        modified:   discogs.py
+        modified:   inspection.py
+        modified:   inspector/__init__.py
+        modified:   inspector/__pycache__/__init__.cpython-311.pyc
+        modified:   inspector/__pycache__/routes.cpython-311.pyc
+        modified:   inspector/routes.py
+        modified:   requirements.txt
+        modified:   server.py
+        modified:   static/server.png
+        modified:   static/style.css
+        modified:   sysinfo.py
+        modified:   templates/base.html
+        modified:   templates/digger.html
+        modified:   templates/home.html
+        modified:   templates/modules.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        __pycache__/
+        digger/__pycache__/
+        inspector/__pycache__/__init__.cpython-313.pyc
+        inspector/__pycache__/routes.cpython-313.pyc
+        restart.sh
+        setup/
+        status.sh
+        status_live.sh

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}nx1.info | Server{% endblock %}
+{% block page_title %}nx1.info | Server | Homepage{% endblock %}
+{% block page_title_suffix %} | Server | Homepage{% endblock %}
 {% block content %}
 <pre>
 System Information:
@@ -9,7 +10,6 @@ System Information:
 
 Tools:
 <a href="{{ url_for('digger.routes.index') }}">Discogs Digger</a>  : Search for tracks by artist or label on Discogs.
-<a href="{{ url_for('skybouncer.routes.index') }}">SkyBouncer</a>      : Find looped flights from a starting airport.
 <a href="{{ url_for('inspector.routes.index') }}">Module Browser</a>  : View installed Python modules.
 <a href="#">EXOD</a>            : EPIC XMM Outburst Detector.
 <a href="#">Investment Fund</a> : Losing money since 2025.

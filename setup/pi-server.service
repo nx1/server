@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn instance to serve my home server
+After=network.target
+
+[Service]
+User=x1
+Group=www-data
+WorkingDirectory=/home/x1/server
+Environment="PATH=/home/x1/server/venv/bin"
+# Adjust 'server:app' if your Flask variable name isn't 'app'
+ExecStart=/home/x1/server/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:5000 server:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
