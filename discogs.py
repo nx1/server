@@ -9,16 +9,29 @@ class Discogs:
     def __init__(self, **kwargs):
         self.token = os.getenv("DISCOGS_TOKEN")
         self.headers = {"User-Agent": "DiscogsAPI/1.0"}
+        self.MAX_WORKERS = 3
+        self.ARTIST_MAX_RELEASES = 100
     
     def get(self, url, **kwargs):
         params = {"token": self.token, **kwargs}
-        response = requests.get(url, headers=self.headers, params=params)
-        response.raise_for_status()
-
-        if response.headers.get('x-discogs-ratelimit-remaining') == '1':
-            print(f"Rate limit exceeded, sleeping for 60 seconds")
-            time.sleep(60)
-        return response
+        
+        while True:
+            response = requests.get(url, headers=self.headers, params=params)
+            
+            if response.status_code == 429:
+                print(f"Rate limited, sleeping 60 seconds...")
+                time.sleep(60)
+                continue  # retry the same request
+            
+            if response.status_code != 200:
+                print(f"Error: {response.status_code} {response.text}")
+                response.raise_for_status()
+            
+            if response.headers.get('x-discogs-ratelimit-remaining') == '1':
+                print(f"Rate limit nearly exceeded, sleeping 10 seconds")
+                time.sleep(10)
+            
+            return response
 
     def search(self, per_page=100, **kwargs):
         base_url = 'https://api.discogs.com/database/search'
@@ -29,20 +42,28 @@ class Discogs:
 
     def get_artist_releases(self, artist_id, sort='year', sort_order='desc'):
         base_url = f'https://api.discogs.com/artists/{artist_id}/releases'
-        params = {"token": self.token, "sort": sort, "sort_order": sort_order, "per_page": 100}
-
+        params = {"sort": sort, "sort_order": sort_order, "per_page": 100}
+    
         first = self.get(base_url, **params, page=1).json()
         total_pages = first['pagination']['pages']
+        total_items = first['pagination']['items']
         all_releases = list(first['releases'])
-
+    
+        if total_items > self.ARTIST_MAX_RELEASES:
+            print(f"Artist has {total_items} releases, capping at {self.ARTIST_MAX_RELEASES}")
+            return all_releases[:self.ARTIST_MAX_RELEASES]  # just return what we have from page 1
+    
         def fetch_page(page):
-            return self.get(url=base_url, **params, page=page).json()['releases']
-
-        with ThreadPoolExecutor(max_workers=5) as executor:
-            futures = {executor.submit(fetch_page, p): p for p in range(2, total_pages + 1)}
+            return self.get(base_url, **params, page=page).json()['releases']
+    
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            futures = [executor.submit(fetch_page, p) for p in range(2, total_pages + 1)]
             for future in as_completed(futures):
-                all_releases.extend(future.result())
-
+                try:
+                    all_releases.extend(future.result())
+                except Exception as e:
+                    print(f"Page fetch failed: {e}")
+    
         return all_releases
 
     def get_label_releases(self, label_id, sort='year', sort_order='desc'):
@@ -57,7 +78,7 @@ class Discogs:
         def fetch_page(page):
             return self.get(base_url, **params, page=page).json()['releases']
 
-        with ThreadPoolExecutor(max_workers=5) as executor:
+        with ThreadPoolExecutor(max_workers=self.MAX_WORKERS) as executor:
             futures = {executor.submit(fetch_page, p): p for p in range(2, total_pages + 1)}
             for future in as_completed(futures):
                 all_releases.extend(future.result())
@@ -89,7 +110,7 @@ class Discogs:
                     result.append(track)
             return result
 
-        with ThreadPoolExecutor(max_workers=5) as executor:
+        with ThreadPoolExecutor(max_workers=self.MAX_WORKERS) as executor:
             futures = [executor.submit(process_release, release) for release in releases]
 
             for future in as_completed(futures):
@@ -100,6 +121,46 @@ class Discogs:
             
         print(f"Got {len(all_tracks)} tracks")
         return all_tracks
+
+
+    def stream_artist_tracks(self, artist_name):
+        search_results = self.search(query=artist_name, type='artist', per_page=1)
+        if not search_results['results']:
+            return
+        artist_id = search_results['results'][0]['id']
+        releases = self.get_artist_releases(artist_id)
+    
+        for release in releases:
+            if release['type'] == 'master':
+                master  = self.get(release['resource_url']).json()       # fetch the master
+                release = self.get(master['main_release_url']).json()    # then get main release from master
+            
+            tracks = self.get_release_tracks(release_id=release['id'])
+            for track in tracks:
+                if track['type_'] != 'track':
+                    continue
+                track['release'] = release
+                if 'artists' in track:
+                    if any(a['id'] == artist_id for a in track['artists']):
+                        yield track
+                else:
+                    yield track
+
+    def stream_label_tracks(self, label_name):
+        """Generator version of search_label_tracks, yields tracks as they arrive."""
+        search_result = self.search(query=label_name, type='label', per_page=1)
+        if not search_result['results']:
+            return
+        label_id = search_result['results'][0]['id']
+
+        releases = self.get_label_releases(label_id)
+
+        for i, release in enumerate(releases):
+            tracks = self.get_release_tracks(release_id=release['id'])
+            for track in tracks:
+                track['release'] = release
+                yield track               # <-- yield instead of append
+
 
     
     def get_label_tracks(self, label_id):
@@ -114,7 +175,7 @@ class Discogs:
                 track['release'] = release
             return tracks 
 
-        with ThreadPoolExecutor(max_workers=5) as executor:
+        with ThreadPoolExecutor(max_workers=self.MAX_WORKERS) as executor:
             futures = [executor.submit(process_release, release) for release in releases]
 
             for future in as_completed(futures):

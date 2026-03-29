@@ -5,25 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nx1.info | Discogs Digger</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-        }
-        .container {
-            max-width: 1200px;
-        }
-        .track-table {
-            margin-top: 1.5rem;
-        }
-        .search-form {
-            max-width: 500px;
-            margin: 1.5rem auto;
-        }
-        .table {
-            color: #ffffff;
-            font-size: 0.9rem;
-        }
+        body { background-color: #121212; color: #ffffff; }
+        .container { max-width: 1200px; }
+        .track-table { margin-top: 1.5rem; }
+        .search-form { max-width: 500px; margin: 1.5rem auto; }
+        .table { color: #ffffff; font-size: 0.9rem; }
         .table thead th {
             border-bottom: 1px solid #404040;
             font-size: 0.85rem;
@@ -31,9 +19,7 @@
             padding: 0.4rem;
             color: #ffffff;
         }
-        .table tbody td {
-            color: #ffffff !important;
-        }
+        .table tbody td { color: #ffffff !important; }
         .table-striped > tbody > tr:nth-of-type(odd) {
             background-color: rgba(255, 255, 255, 0.03);
             color: #ffffff !important;
@@ -43,26 +29,13 @@
             color: #ffffff !important;
         }
         .thumbnail {
-            width: 32px;
-            height: 32px;
-            object-fit: cover;
-            border-radius: 3px;
+            width: 32px; height: 32px;
+            object-fit: cover; border-radius: 3px;
         }
-        .track-row {
-            vertical-align: middle;
-        }
-        .track-row td {
-            padding: 0.3rem 0.4rem;
-            border-color: #282828;
-        }
-        .release-link {
-            color: #1db954;
-            text-decoration: none;
-        }
-        .release-link:hover {
-            color: #1ed760;
-            text-decoration: underline;
-        }
+        .track-row { vertical-align: middle; }
+        .track-row td { padding: 0.3rem 0.4rem; border-color: #282828; }
+        .release-link { color: #1db954; text-decoration: none; }
+        .release-link:hover { color: #1ed760; text-decoration: underline; }
         .form-control {
             background-color: #282828;
             border-color: #404040;
@@ -74,151 +47,214 @@
             color: #ffffff;
             box-shadow: 0 0 0 0.25rem rgba(29, 185, 84, 0.25);
         }
-        .btn-primary {
-            background-color: #1db954;
-            border-color: #1db954;
-        }
-        .btn-primary:hover {
-            background-color: #1ed760;
-            border-color: #1ed760;
-        }
-        .alert-info {
-            background-color: #282828;
-            border-color: #404040;
-            color: #ffffff;
-        }
-        h1, h2 {
-            color: #ffffff;
-        }
-        .text-muted {
-            color: #a0a0a0 !important;
-        }
-        .spinner-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(18, 18, 18, 0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid #282828;
-            border-top: 4px solid #1db954;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-bottom: 1rem;
-        }
-        .spinner-message {
-            color: #ffffff;
-            font-size: 0.9rem;
-            opacity: 0.8;
+        .btn-primary { background-color: #1db954; border-color: #1db954; }
+        .btn-primary:hover { background-color: #1ed760; border-color: #1ed760; }
+        .alert-info { background-color: #282828; border-color: #404040; color: #ffffff; }
+        h1, h2 { color: #ffffff; }
+        .text-muted { color: #a0a0a0 !important; }
+        #status-bar {
             text-align: center;
+            color: #a0a0a0;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            min-height: 1.2rem;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        #status-bar .count { color: #1db954; font-weight: 600; }
+        /* Pulse animation on the count while loading */
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .pulsing { animation: pulse 1.2s ease-in-out infinite; }
     </style>
 </head>
 <body>
-    <div class="spinner-overlay">
-        <div class="spinner"></div>
-        <div class="spinner-message">Requests with many tracks may take some time :)</div>
-    </div>
-
     <div class="container">
         <h1 class="text-center mt-4">nx1.info | Discogs Digger</h1>
-        
-        <form method="POST" class="search-form" id="searchForm">
+
+        <!-- Form is now a plain div — JS handles submission -->
+        <div class="search-form">
             <div class="input-group">
-                <select name="search_type" class="form-select" style="max-width: 120px;">
-                    <option value="artist" {% if search_type == 'artist' %}selected{% endif %}>Artist</option>
-                    <option value="label" {% if search_type == 'label' %}selected{% endif %}>Label</option>
+                <select id="search_type" class="form-select" style="max-width: 120px;">
+                    <option value="artist">Artist</option>
+                    <option value="label">Label</option>
                 </select>
-                <input type="text" name="query" class="form-control" placeholder="Enter name" value="{{ query }}" required>
-                <button type="submit" class="btn btn-primary">Search</button>
+                <input type="text" id="query" class="form-control" placeholder="Enter name" required>
+                <button id="search-btn" class="btn btn-primary" onclick="startSearch()">Search</button>
             </div>
-        </form>
+        </div>
 
-        {% if query %}
-            <h2 class="text-center mt-3">
-                {% if search_type == 'artist' %}
-                    Tracks by {{ query }}
-                {% else %}
-                    Tracks from {{ query }}
-                {% endif %}
-            </h2>
-        {% endif %}
+        <div id="status-bar"></div>
 
-        {% if tracks %}
-            <div class="track-table">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th style="width: 40px"></th>
-                            <th style="width: 50px">Pos</th>
-                            <th>Title</th>
-                            <th>Release</th>
-                            <th>Label</th>
-                            <th style="width: 70px">Year</th>
-                            <th style="width: 90px">Duration</th>
-                            <th>Format</th>
-                            <th>Youtube</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for track in tracks %}
-                        <tr class="track-row">
-                            <td>
-                                {% if track.release.thumb %}
-                                    <img src="{{ track.release.thumb }}" alt="Album cover" class="thumbnail">
-                                {% else %}
-                                    <div class="thumbnail bg-dark d-flex align-items-center justify-content-center">
-                                        <small class="text-muted">No image</small>
-                                    </div>
-                                {% endif %}
-                            </td>
-                            <td>{{ track.position }}</td>
-                            <td>{{ track.title }}</td>
-                            <td>
-                                <a href="{{ track.release.resource_url.replace('api.discogs.com/releases', 'discogs.com/release') }}" 
-                                   class="release-link" 
-                                   target="_blank">
-                                    {{ track.release.title }}
-                                </a>
-                            </td>
-                            <td>{{ track.release.label }}</td>
-                            <td>{{ track.release.year }}</td>
-                            <td>{{ track.duration }}</td>
-                            <td>{{ track.release.format }}</td>
-                            <td>
-                                <a href="{{ track.youtube_url }}" target="_blank">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        {% elif query %}
-            <div class="alert alert-info text-center">
-                No tracks found for this query.
-            </div>
-        {% endif %}
+        <div id="results-heading" class="text-center mt-3" style="display:none;">
+            <h2 id="heading-text"></h2>
+        </div>
+
+        <div class="track-table" id="track-table" style="display:none;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 40px"></th>
+                        <th style="width: 50px">Pos</th>
+                        <th>Title</th>
+                        <th>Release</th>
+                        <th>Label</th>
+                        <th style="width: 70px">Year</th>
+                        <th style="width: 90px">Duration</th>
+                        <th>Format</th>
+                        <th>Youtube</th>
+                    </tr>
+                </thead>
+                <tbody id="tracks-body"></tbody>
+            </table>
+        </div>
+
+        <div id="no-results" class="alert alert-info text-center" style="display:none;">
+            No tracks found for this query.
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.getElementById('searchForm').addEventListener('submit', function() {
-            document.querySelector('.spinner-overlay').style.display = 'flex';
+        let activeSource = null;  // Track the current EventSource so we can cancel it
+        let trackCount = 0;
+
+        function startSearch() {
+            const query      = document.getElementById('query').value.trim();
+            const searchType = document.getElementById('search_type').value;
+
+            if (!query) return;
+
+            // Cancel any in-progress search
+            if (activeSource) {
+                activeSource.close();
+                activeSource = null;
+            }
+
+            // Reset UI
+            trackCount = 0;
+            document.getElementById('tracks-body').innerHTML = '';
+            document.getElementById('track-table').style.display = 'none';
+            document.getElementById('no-results').style.display  = 'none';
+            document.getElementById('search-btn').disabled = true;
+
+            // Update heading
+            const headingText = searchType === 'artist'
+                ? `Tracks by ${query}`
+                : `Tracks from ${query}`;
+            document.getElementById('heading-text').textContent = headingText;
+            document.getElementById('results-heading').style.display = 'block';
+
+            setStatus(`Searching...`, true);
+
+            // Open SSE stream
+            const url = `/digger/search?query=${encodeURIComponent(query)}&search_type=${encodeURIComponent(searchType)}`;
+            activeSource = new EventSource(url);
+
+            activeSource.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+            
+                if (data.done) {
+                    activeSource.close();
+                    activeSource = null;
+                    document.getElementById('search-btn').disabled = false;
+                    if (trackCount === 0) {
+                        document.getElementById('no-results').style.display = 'block';
+                        setStatus('');
+                    } else {
+                        setStatus(`Found <span class="count">${trackCount}</span> tracks`, false);
+                    }
+                    return;
+                }
+            
+                if (data.warning) {
+                    setStatus(`⚠️ ${data.warning}`, false);
+                    return;
+                }
+            
+                if (data.error) {
+                    setStatus(`❌ ${data.error}`, false);
+                    activeSource.close();
+                    activeSource = null;
+                    document.getElementById('search-btn').disabled = false;
+                    return;
+                }
+            
+                // Normal track
+                if (trackCount === 0) {
+                    document.getElementById('track-table').style.display = 'block';
+                }
+                trackCount++;
+                setStatus(`Loading… <span class="count">${trackCount}</span> tracks found so far`, true);
+                appendTrack(data);
+            };
+            activeSource.onerror = function() {
+                activeSource.close();
+                activeSource = null;
+                document.getElementById('search-btn').disabled = false;
+                setStatus('Connection error — please try again.');
+            };
+        }
+
+        function setStatus(html, pulsing = false) {
+            const bar = document.getElementById('status-bar');
+            bar.innerHTML = html;
+            bar.className = pulsing ? 'pulsing' : '';
+        }
+
+        function appendTrack(track) {
+            const release = track.release || {};
+
+            // Build the Discogs release URL from the API url
+            const releaseUrl = (release.resource_url || '')
+                .replace('api.discogs.com/releases', 'www.discogs.com/release');
+
+            // Thumbnail cell
+            const thumbHtml = release.thumb
+                ? `<img src="${escHtml(release.thumb)}" alt="Cover" class="thumbnail">`
+                : `<div class="thumbnail bg-dark d-flex align-items-center justify-content-center">
+                       <small class="text-muted" style="font-size:0.6rem">No img</small>
+                   </div>`;
+
+            // YouTube cell — only show icon if url exists
+            const ytHtml = track.youtube_url
+                ? `<a href="${escHtml(track.youtube_url)}" target="_blank" style="color:#ff0000;">
+                       <i class="fab fa-youtube"></i>
+                   </a>`
+                : '';
+
+            const labelText  = Array.isArray(release.label)  ? release.label.join(', ')  : (release.label  || '');
+            const formatText = Array.isArray(release.format) ? release.format.join(', ') : (release.format || '');
+
+            const row = document.createElement('tr');
+            row.className = 'track-row';
+            row.innerHTML = `
+                <td>${thumbHtml}</td>
+                <td>${escHtml(track.position  || '')}</td>
+                <td>${escHtml(track.title     || '')}</td>
+                <td>
+                    <a href="${escHtml(releaseUrl)}" class="release-link" target="_blank">
+                        ${escHtml(release.title || '')}
+                    </a>
+                </td>
+                <td>${escHtml(labelText)}</td>
+                <td>${escHtml(String(release.year || ''))}</td>
+                <td>${escHtml(track.duration  || '')}</td>
+                <td>${escHtml(formatText)}</td>
+                <td>${ytHtml}</td>
+            `;
+            document.getElementById('tracks-body').appendChild(row);
+        }
+
+        // Prevent XSS from Discogs data
+        function escHtml(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        // Allow pressing Enter in the search box
+        document.getElementById('query').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') startSearch();
         });
     </script>
 </body>
