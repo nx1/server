@@ -95,7 +95,7 @@ class Discogs:
             for future in as_completed(futures):
                 try:
                     all_tracks.extend(future.result())
-                except:
+                except Exception as e:
                     print(f'A release failed to fetch: {e}')
             
         print(f"Got {len(all_tracks)} tracks")
