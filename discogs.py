@@ -72,7 +72,7 @@ class Discogs:
         params = {"token": self.token, "sort":sort, "sort_order":sort_order, "per_page":100}
 
         first = self.get(base_url, **params, page=1).json()
-        total_pages = first['paginatrion']['pages']
+        total_pages = first['pagination']['pages']
         all_releases = list(first['releases'])
 
         def fetch_page(page):
