@@ -51,3 +51,7 @@ Untracked files:
         setup/
         status.sh
         status_live.sh
+static/mixes/*.opus
+static/mixes/*.wav
+.antigravitycli/
+scratch/

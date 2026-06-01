@@ -10,8 +10,20 @@ class SystemInfo:
         self.uptime          = datetime.now() - self.boot_time
         self.python_version  = f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
         self.connected_users = len(psutil.users())
-        self.cpu_percent     = psutil.cpu_percent(interval=1)
-        self.cpu_freq        = psutil.cpu_freq().current
+        import time
+        t1 = time.time()
+        net1 = psutil.net_io_counters()
+        
+        # Measure CPU percent over 0.2 seconds instead of 1 second.
+        # This acts as our sleep delta for bandwidth calculation and drastically reduces request blocking time from 1.2s to 0.2s!
+        self.cpu_percent     = psutil.cpu_percent(interval=0.2)
+        
+        net2 = psutil.net_io_counters()
+        t2 = time.time()
+        dt = t2 - t1
+        if dt <= 0: dt = 0.001
+        
+        self.cpu_freq        = psutil.cpu_freq().current if psutil.cpu_freq() else 0
         self.memory          = psutil.virtual_memory()
         self.mem_used        = self.memory.used / (1024 ** 3)
         self.mem_available   = self.memory.available / (1024 ** 3)
@@ -24,9 +36,13 @@ class SystemInfo:
         self.disk_free       = self.disk.free / (1024 ** 3)
         self.disk_total      = self.disk.total / (1024 ** 3)
         self.disk_percent    = self.disk.percent
-        self.net             = psutil.net_io_counters()
-        self.net_sent        = self.net.bytes_sent / (1024 ** 2)
-        self.net_recv        = self.net.bytes_recv / (1024 ** 2)
+        
+        self.net_sent = net2.bytes_sent / (1024 ** 2) # MB total
+        self.net_recv = net2.bytes_recv / (1024 ** 2) # MB total
+        
+        # Calculate instant speed in KB/s
+        self.net_sent_speed = ((net2.bytes_sent - net1.bytes_sent) / 1024.0) / dt
+        self.net_recv_speed = ((net2.bytes_recv - net1.bytes_recv) / 1024.0) / dt
         self.net_con         = psutil.net_connections()
 
     def get_cpu_temp(self):
@@ -48,7 +64,8 @@ class SystemInfo:
             f"Memory:          {self.mem_used:.2f} / {self.mem_total:.2f} GB ({self.mem_percent:.2f}%)\n"
             f"Disk Space:      {self.disk_used:.2f} / {self.disk_total:.2f} GB ({self.disk_percent:.2f}%)\n"
             f"Disk Free:       {self.disk_free:.2f} GB\n"
-            f"Network:         Up: {self.net_sent:.2f} Mb Down: {self.net_recv:.2f} Mb"
+            f"Network (Total): Up: {self.net_sent:.2f} MB Down: {self.net_recv:.2f} MB\n"
+            f"Network (Speed): Up: {self.net_sent_speed:.1f} KB/s Down: {self.net_recv_speed:.1f} KB/s"
         )
 
 if __name__ == "__main__":

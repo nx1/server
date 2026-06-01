@@ -16,3 +16,8 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: -0.0em;
 }
+
+audio {
+    filter: invert(100%) hue-rotate(180deg) brightness(1.5);
+    margin-top: 10px;
+}
