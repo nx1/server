@@ -49,6 +49,22 @@
     flex-wrap: wrap;
     white-space: normal;
   }
+  .summary-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .genre-tags {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 2px;
+  }
+  .genre-tag {
+    font-size: 0.65em;
+    color: #666;
+    text-transform: uppercase;
+  }
   .list-thumbnail {
     width: 24px;
     height: 24px;
@@ -343,9 +359,18 @@
           {%- endfor -%}
         {%- endif -%}
       </span>
-      {%- if mix['artwork'] -%}
-      <img src="{{ url_for('static', filename='mixes/artwork/' + mix['artwork']) }}" class="list-thumbnail" alt="">
-      {%- endif -%}
+      <span class="summary-right">
+        {%- if mix.get('genres') -%}
+        <span class="genre-tags">
+          {%- for genre in mix['genres'] -%}
+          <span class="genre-tag">{{ genre }}</span>
+          {%- endfor -%}
+        </span>
+        {%- endif -%}
+        {%- if mix['artwork'] -%}
+        <img src="{{ url_for('static', filename='mixes/artwork/' + mix['artwork']) }}" class="list-thumbnail" alt="">
+        {%- endif -%}
+      </span>
     </summary>
     <div class="mix-details">
       <div class="details-layout {% if mix['artwork'] or mix['description'] %}has-artwork{% endif %}">
@@ -367,7 +392,7 @@
         <div class="content-container">
           {%- if mix['local_exists'] -%}
           <div class="mix-player-container" id="player-container-{{ loop.index }}">
-            <audio class="mix-audio" preload="none">
+            <audio class="mix-audio" preload="none" data-filename="{{ mix['file'] }}">
               <source src="{{ url_for('static', filename='mixes/' + mix['file']) }}" type="{{ mix['local_mime'] }}">
             </audio>
             <div class="custom-player">
@@ -573,6 +598,17 @@ document.addEventListener('DOMContentLoaded', () => {
     audio.addEventListener('play', () => {
       playPauseBtn.textContent = '[ PAUSE ]';
       mixItem.classList.add('is-playing');
+      
+      // Log play count once per page load for this mix
+      if (!audio.dataset.playLogged) {
+        audio.dataset.playLogged = 'true';
+        const filename = audio.dataset.filename;
+        if (filename) {
+          fetch(`/mixes/play/${encodeURIComponent(filename)}`, {
+            method: 'POST'
+          }).catch(err => console.error('Error logging play:', err));
+        }
+      }
     });
     
     audio.addEventListener('pause', () => {

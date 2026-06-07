@@ -41,3 +41,24 @@ def index():
             mix['local_mime'] = None
             
     return render_template('mixes.html', mixes=mix_data)
+
+@app.route('/play/<path:filename>', methods=['POST'])
+def record_play(filename):
+    plays_file = os.path.join(os.path.dirname(__file__), 'plays.json')
+    plays = {}
+    if os.path.exists(plays_file):
+        try:
+            with open(plays_file, 'r') as f:
+                plays = json.load(f)
+        except Exception:
+            pass
+            
+    plays[filename] = plays.get(filename, 0) + 1
+    
+    try:
+        with open(plays_file, 'w') as f:
+            json.dump(plays, f, indent=2)
+    except Exception as e:
+        return {"error": str(e)}, 500
+        
+    return {"status": "success", "plays": plays[filename]}, 200

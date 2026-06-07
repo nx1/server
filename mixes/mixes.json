@@ -267,7 +267,11 @@
       }
     ],
     "artwork": "sleeve_b2b_cb_rd2.jpg",
-    "description": "After a long hiatus we're back! Teaming up with long-time friend Generator once again for a marathon 4h30 mix. We covered some serious ground in this one, starting off in minimal territory we move into some deeper psyprog, tempo ranges from 130 - 147 over the course of this mix so it's a long journey, threw in an absolutely classic unreleased Son Kite tune at 2h30 mark, literally taken off a live dvd they did! :P Artwork: John Martin - The Great Day of His Wrath (1851)"
+    "description": "After a long hiatus we're back! Teaming up with long-time friend Generator once again for a marathon 4h30 mix. We covered some serious ground in this one, starting off in minimal territory we move into some deeper psyprog, tempo ranges from 130 - 147 over the course of this mix so it's a long journey, threw in an absolutely classic unreleased Son Kite tune at 2h30 mark, literally taken off a live dvd they did! :P Artwork: John Martin - The Great Day of His Wrath (1851)",
+    "genres": [
+      "Psyprog",
+      "Minimal"
+    ]
   },
   {
     "date": "23/06/2025",
@@ -276,82 +280,82 @@
     "links": {},
     "tracklist": [
       {
-        "time": "00:00",
+        "time": "0:00:00",
         "artist": "Deep Dive Corp",
         "title": "Laugh"
       },
       {
-        "time": "02:48",
+        "time": "0:02:48",
         "artist": "Gabriel Le Mar",
         "title": "Sunrise to Sunset"
       },
       {
-        "time": "07:56",
+        "time": "0:07:56",
         "artist": "4 Winds Circle",
         "title": "Compare"
       },
       {
-        "time": "11:13",
+        "time": "0:11:13",
         "artist": "Sonic Soul",
         "title": "Pornodelica"
       },
       {
-        "time": "15:59",
+        "time": "0:15:59",
         "artist": "Flame on Fire",
         "title": "High Voltage Guitar"
       },
       {
-        "time": "19:11",
+        "time": "0:19:11",
         "artist": "Luminaire",
         "title": "Duet Dub"
       },
       {
-        "time": "22:19",
+        "time": "0:22:19",
         "artist": "Klangstrahler",
         "title": "Savoy"
       },
       {
-        "time": "23:34",
+        "time": "0:23:34",
         "artist": "Deep Dive Corp",
         "title": "Control Rmx"
       },
       {
-        "time": "27:34",
+        "time": "0:27:34",
         "artist": "Naitve Radio",
         "title": "Lucid Dream"
       },
       {
-        "time": "30:39",
+        "time": "0:30:39",
         "artist": "Tomtron",
         "title": "Under the Sun"
       },
       {
-        "time": "34:05",
+        "time": "0:34:05",
         "artist": "Purple Acan",
         "title": "above and Below"
       },
       {
-        "time": "36:00",
+        "time": "0:36:00",
         "artist": "chi-ad",
         "title": "Monsters"
       },
       {
-        "time": "44:34",
+        "time": "0:44:34",
         "artist": "necton",
         "title": "the hitman"
       },
       {
-        "time": "49:58",
+        "time": "0:49:58",
         "artist": "Codex",
         "title": "Reaching Out"
       },
       {
-        "time": "53:24",
+        "time": "0:53:24",
         "artist": "Blue Planet Corporation",
         "title": "Human Genom Project"
       },
       {
-        "time": "57:15",
+        "time": "0:57:15",
         "artist": "Ouija",
         "title": "Night Train"
       },
@@ -372,7 +376,10 @@
       }
     ],
     "artwork": "psyrock.jpg",
-    "description": "This is a funny genre that really kinda vanished into thin air, there was a good while where a ton of guitar-heavy psytrance was coming out, SUN project, C.O.N Sequencer and various others, this mix is entirely what I call 'psyrock' (not to be confused with psychedelic rock) but yeah guitar heavy stuff took a while to collect these guys!<br><br>Artwork by Leon Devenice"
+    "description": "This is a funny genre that really kinda vanished into thin air, there was a good while where a ton of guitar-heavy psytrance was coming out, SUN project, C.O.N Sequencer and various others, this mix is entirely what I call 'psyrock' (not to be confused with psychedelic rock) but yeah guitar heavy stuff took a while to collect these guys!<br><br>Artwork by Leon Devenice",
+    "genres": [
+      "psyrock"
+    ]
   },
   {
     "date": "21/02/2025",
@@ -383,163 +390,167 @@
     },
     "tracklist": [
       {
-        "time": "00:00",
+        "time": "0:00:00",
         "artist": "Effective Force",
         "title": "Diamond Bullet (Beyond Judgement) [1991]"
       },
       {
-        "time": "03:28",
+        "time": "0:03:28",
         "artist": "Dienzephalon",
         "title": "Asian Girl [2001]"
       },
       {
-        "time": "06:22",
+        "time": "0:06:22",
         "artist": "Segment",
-        "title": "Human Bit's [2001]"
+        "title": "Human Bit's [2002]"
       },
       {
-        "time": "10:56",
+        "time": "0:10:56",
         "artist": "Morphem",
-        "title": "Actinium 227 & Intro [2002]"
+        "title": "Actinium 227 [2001]"
       },
       {
-        "time": "15:35",
+        "time": "0:13:33",
+        "artist": "Mladen Glavinic",
+        "title": "Intro [2005]"
+      },
+      {
+        "time": "0:15:35",
         "artist": "Rambadu",
-        "title": "Visie [2016]"
+        "title": "Visie [2021]"
       },
       {
-        "time": "18:08",
+        "time": "0:18:08",
         "artist": "Double Dragon",
-        "title": "Hairy Liquid [2001]"
+        "title": "Hairy Liquid [2000]"
       },
       {
-        "time": "21:17",
-        "artist": "Splash",
-        "title": "On Mi [1996]"
+        "time": "0:21:17",
+        "artist": "Maara",
+        "title": "Splash on Mi [2021]"
       },
       {
-        "time": "24:54",
-        "artist": "Double Dragon",
-        "title": "Know Unknown [2001]"
+        "time": "0:24:54",
+        "artist": "Sun Control Species",
+        "title": "Know Unknown [2004]"
       },
       {
-        "time": "27:02",
-        "artist": "Dienzephalon",
-        "title": "Paranoid Call [2001]"
+        "time": "0:27:02",
+        "artist": "Logiztik Sounds & Audiobill",
+        "title": "Paranoid Call [2008]"
       },
       {
-        "time": "33:23",
-        "artist": "Cass & Slide",
-        "title": "Opera [2000]"
+        "time": "0:33:23",
+        "artist": "Tone Depth",
+        "title": "Opera Cafe (Blackwatch's Plum Gut Mix) [2002]"
       },
       {
-        "time": "35:47",
-        "artist": "G.O.L.",
-        "title": "Hail the Whale [1995]"
+        "time": "0:35:47",
+        "artist": "Extrawelt",
+        "title": "Hail the Whale (Coexisting Mix) [2021]"
       },
       {
-        "time": "40:08",
-        "artist": "Phat Kontrollerz",
-        "title": "Where do you dance [2004]"
+        "time": "0:40:08",
+        "artist": "Precision",
+        "title": "Where Do You Dance [2004]"
       },
       {
-        "time": "45:38",
-        "artist": "Necton",
+        "time": "0:45:38",
+        "artist": "Ben Camp",
         "title": "Burning [2002]"
       },
       {
-        "time": "48:25",
-        "artist": "Phony Orphants",
-        "title": "Beautiful People [2003]"
+        "time": "0:48:25",
+        "artist": "Chemical Soldiers",
+        "title": "Beautiful People (Frank Garcia Remix) [2004]"
       },
       {
-        "time": "51:37",
+        "time": "0:51:37",
         "artist": "Boston 168",
         "title": "Oblivion [2016]"
       },
       {
-        "time": "54:41",
+        "time": "0:54:41",
         "artist": "Generator",
-        "title": "I027 [2004]"
+        "title": "I027 [2006]"
       },
       {
-        "time": "62:21",
+        "time": "1:02:21",
         "artist": "Generator",
-        "title": "K010 [2005]"
+        "title": "K010 [2007]"
       },
       {
-        "time": "67:12",
+        "time": "1:07:12",
         "artist": "Alan Backdrop",
-        "title": "Line_b (Ness Reshape) [2016]"
+        "title": "Line_b (Ness Reshape) [2021]"
       },
       {
-        "time": "72:09",
+        "time": "1:12:09",
         "artist": "La Baaz",
-        "title": "Scrool [2004]"
+        "title": "Scroll [2004]"
       },
       {
-        "time": "76:44",
-        "artist": "Bongraiders",
-        "title": "Bongraiders"
+        "time": "1:16:44",
+        "artist": "Chris Pointdexter",
+        "title": "Darkness (Ticon Rmx) [2005]"
       },
       {
-        "time": "76:44",
-        "artist": "Ticon",
-        "title": "Darkness [2003]"
+        "time": "1:20:58",
+        "artist": "V-Tunes",
+        "title": "Sonar Groove [2005]"
       },
       {
-        "time": "80:58",
-        "artist": "Sonar Groove",
-        "title": "Sonar Groove [1999]"
-      },
-      {
-        "time": "83:48",
+        "time": "1:23:48",
         "artist": "Parrket",
-        "title": "Through the Never [2014]"
+        "title": "Through the Never [2004]"
       },
       {
-        "time": "89:06",
+        "time": "1:29:06",
         "artist": "Clutch",
-        "title": "PH [2015]"
+        "title": "PH [2005]"
       },
       {
-        "time": "91:56",
+        "time": "1:31:56",
         "artist": "Brain Bubbles",
         "title": "Beautiful [2001]"
       },
       {
-        "time": "95:44",
-        "artist": "Funky BOT",
-        "title": "The Drug Thing [2003]"
+        "time": "1:35:44",
+        "artist": "Funky B.O.T.",
+        "title": "The Drug Thing [2001]"
       },
       {
-        "time": "100:56",
+        "time": "1:40:56",
         "artist": "P-Woland",
-        "title": "Secrets [2015]"
+        "title": "Secrets [2001]"
       },
       {
-        "time": "103:59",
-        "artist": "P.O.T.S.",
+        "time": "1:43:59",
+        "artist": "Sonic Cube",
         "title": "Mr Beat Back [2003]"
       },
       {
-        "time": "105:53",
+        "time": "1:45:53",
         "artist": "Frogacult",
         "title": "Lucky Strike [2003]"
       },
       {
-        "time": "109:54",
+        "time": "1:49:54",
         "artist": "Timetech",
         "title": "Notes [2002]"
       },
       {
-        "time": "113:55",
+        "time": "1:53:55",
         "artist": "Noma",
         "title": "Another time [2000]"
       }
     ],
     "artwork": "100followerspecial.jpg",
-    "description": "Did this mix to celebrate 100 followers on SoundCloud, unfortunately they're charging 75 quid a year these days for artist plus membership so they can suck a fat one >:( First half is slow psytrance kicking around 110 - 120bpm then second half pitch it up to 135 and get into some psyprog goodness enjoy this, I put a lot of time and effort into it :) Cover art: Sesshu Toyo, Winter Landscape, c. 1470"
+    "description": "Did this mix to celebrate 100 followers on SoundCloud, unfortunately they're charging 75 quid a year these days for artist plus membership so they can suck a fat one >:( First half is slow psytrance kicking around 110 - 120bpm then second half pitch it up to 135 and get into some psyprog goodness enjoy this, I put a lot of time and effort into it :) Cover art: Sesshu Toyo, Winter Landscape, c. 1470",
+    "genres": [
+      "Trip-Hop",
+      "Psychedelic"
+    ]
   },
   {
     "date": "21/12/2024",
@@ -550,113 +561,117 @@
     },
     "tracklist": [
       {
-        "time": "00:00",
+        "time": "0:00:00",
         "artist": "Abakus",
         "title": "Igmatik [2004]"
       },
       {
-        "time": "03:47",
+        "time": "0:03:47",
         "artist": "Setaoc Mass",
         "title": "Flying Buttress [2016]"
       },
       {
-        "time": "03:47",
+        "time": "0:03:47",
         "artist": "MOY",
         "title": "Wisdom Track [2020]"
       },
       {
-        "time": "06:06",
+        "time": "0:06:06",
         "artist": "Insane Creation",
         "title": "Fly With Us [2007]"
       },
       {
-        "time": "08:44",
+        "time": "0:08:44",
         "artist": "Reefer Decree",
         "title": "Curved Air (Filur Remix) [2003]"
       },
       {
-        "time": "11:30",
+        "time": "0:11:30",
         "artist": "Ki Ya Tori",
         "title": "Henjin [2021]"
       },
       {
-        "time": "14:26",
+        "time": "0:14:26",
         "artist": "David West",
         "title": "Carrier [2005]"
       },
       {
-        "time": "17:23",
+        "time": "0:17:23",
         "artist": "Rhino Drum",
         "title": "Dark Da-Da [2004]"
       },
       {
-        "time": "17:23",
+        "time": "0:17:23",
         "artist": "Mangomouse",
         "title": "Saoirse [2024]"
       },
       {
-        "time": "20:47",
+        "time": "0:20:47",
         "artist": "Sonify",
         "title": "Sonifunk [2005]"
       },
       {
-        "time": "22:45",
+        "time": "0:22:45",
         "artist": "Buzzmonx",
         "title": "Search [2004]"
       },
       {
-        "time": "25:10",
+        "time": "0:25:10",
         "artist": "Jennifer Loveless",
         "title": "Pleasure (Sleep D Remix) [2024]"
       },
       {
-        "time": "28:12",
+        "time": "0:28:12",
         "artist": "Cristofeu",
         "title": "Hit [2023]"
       },
       {
-        "time": "29:52",
+        "time": "0:29:52",
         "artist": "Silverlining",
         "title": "Invisible Ink [1998]"
       },
       {
-        "time": "34:10",
-        "artist": "Introvert vs. Bj\u00f6rk",
+        "time": "0:34:10",
+        "artist": "Introvert vs. Björk",
         "title": "Joga (Breaks Mix) [2004]"
       },
       {
-        "time": "38:11",
+        "time": "0:38:11",
         "artist": "Freq",
         "title": "Return to the Masters [2003]"
       },
       {
-        "time": "40:48",
+        "time": "0:40:48",
         "artist": "Lube",
         "title": "Jay Lo [2003]"
       },
       {
-        "time": "44:07",
+        "time": "0:44:07",
         "artist": "P.O.T.S.",
         "title": "Klangwelt [2001]"
       },
       {
-        "time": "47:42",
+        "time": "0:47:42",
         "artist": "P.O.T.S.",
         "title": "Image Acustica [2001]"
       },
       {
-        "time": "49:30",
+        "time": "0:49:30",
         "artist": "FileStyle",
         "title": "Your Dance [2007]"
       },
       {
-        "time": "52:50",
+        "time": "0:52:50",
         "artist": "Kalimax",
         "title": "Where is the party [2005]"
       }
     ],
     "artwork": "influence_ears_iye.jpg",
-    "description": "Huge thanks to Wit Wiki and Wilko duo down under for asking me to put this mix together, the fact that these guys reached out to my little obscure internet presence really shows that they know their shit and they are some real ones ;) [<a href='https://soundcloud.com/influenceears' target='_blank' style='color: #00ff00; text-decoration: underline;'>Influence Ears Page</a>]<br><br>In the spirit of all things progressive, I've sequenced an hour of progressive (psy)trance, breaks, house and a few things in between it all.<br><br>The best metaphor I have for this mix is that of an hour-long roller coaster, so strap-in!<br><br>Once again big thanks to Influence Ears for inviting me on! Keep your ears peeled and your calendars free, great things in the pipeline from these guys :)"
+    "description": "Huge thanks to Wit Wiki and Wilko duo down under for asking me to put this mix together, the fact that these guys reached out to my little obscure internet presence really shows that they know their shit and they are some real ones ;) [<a href='https://soundcloud.com/influenceears' target='_blank' style='color: #00ff00; text-decoration: underline;'>Influence Ears Page</a>]<br><br>In the spirit of all things progressive, I've sequenced an hour of progressive (psy)trance, breaks, house and a few things in between it all.<br><br>The best metaphor I have for this mix is that of an hour-long roller coaster, so strap-in!<br><br>Once again big thanks to Influence Ears for inviting me on! Keep your ears peeled and your calendars free, great things in the pipeline from these guys :)",
+    "genres": [
+      "Trance",
+      "Techno"
+    ]
   },
   {
     "date": "25/08/2024",
@@ -667,83 +682,86 @@
     },
     "tracklist": [
       {
-        "time": "00:00",
+        "time": "0:00:00",
         "artist": "Necton",
         "title": "Noizy Family [2002]"
       },
       {
-        "time": "01:43",
+        "time": "0:01:43",
         "artist": "Aircrash Bureau",
         "title": "Power Surpassed [2003]"
       },
       {
-        "time": "04:46",
+        "time": "0:04:46",
         "artist": "Midimiliz / Biologic",
         "title": "Cyclic Structure / Hal 200 [2004/2002]"
       },
       {
-        "time": "10:42",
+        "time": "0:10:42",
         "artist": "Lightsphere",
         "title": "Chinese Disco [2006]"
       },
       {
-        "time": "13:46",
+        "time": "0:13:46",
         "artist": "Phat Kontrollerz",
         "title": "Simple Control Complex [2004]"
       },
       {
-        "time": "20:11",
+        "time": "0:20:11",
         "artist": "Shadow FX",
         "title": "Left of Center [2007]"
       },
       {
-        "time": "23:46",
+        "time": "0:23:46",
         "artist": "C.O.N. Sequencer",
         "title": "Funky Phasing [2003]"
       },
       {
-        "time": "24:41",
+        "time": "0:24:41",
         "artist": "Funky Dragon",
         "title": "Day After [2007]"
       },
       {
-        "time": "27:19",
+        "time": "0:27:19",
         "artist": "Trimatic",
         "title": "Kyoto [2002]"
       },
       {
-        "time": "30:24",
+        "time": "0:30:24",
         "artist": "Necton",
         "title": "Technotest [2001]"
       },
       {
-        "time": "36:00",
+        "time": "0:36:00",
         "artist": "Teleport",
         "title": "Pump 'n Spray [2004]"
       },
       {
-        "time": "41:36",
+        "time": "0:41:36",
         "artist": "Vibrasphere",
         "title": "Lemon Phase [2003]"
       },
       {
-        "time": "46:14",
+        "time": "0:46:14",
         "artist": "Prometheus",
         "title": "White Sand [2001]"
       },
       {
-        "time": "48:58",
+        "time": "0:48:58",
         "artist": "Bitmonx & DJ Fabio",
         "title": "Rice 'n' Beans [2007]"
       },
       {
-        "time": "51:32",
+        "time": "0:51:32",
         "artist": "Drone",
         "title": "So 15b [2005]"
       }
     ],
     "artwork": "silkysmoothpsyprog.jpg",
-    "description": "\"We go again god damn it!\"<br><br>Cover art: El Greco, View of Toledo, c. 1596"
+    "description": "\"We go again god damn it!\"<br><br>Cover art: El Greco, View of Toledo, c. 1596",
+    "genres": [
+      "Psyprog"
+    ]
   },
   {
     "date": "30/03/2024",
@@ -906,7 +924,10 @@
       }
     ],
     "artwork": "shadow_dance.jpg",
-    "description": "Aaaaaaaaand we're back!<br><br>After a small hiatus, I have joined forces with my long-time friend and fellow music hoarder <a href='https://www.youtube.com/@cosmicbabies' target='_blank' style='color: #00ff00; text-decoration: underline;'>Generator</a>.<br><br>Together we have conjured a 2 and a half hour dark trip, shoutout to all those who have listened to my mixes in the past and have brought to light the tunes that would have been lost to time. You know who you are ;)<br><br>Feel free to play the sample bingo as you listen :)<br><br>\u2022 \"I guess you guys don't go out much\"<br>\u2022 \"we decided to make it female so that it would be more docile and controllable\"<br>\u2022 \"sometimes I wonder what keeps me ticking\"<br>\u2022 \"what the hell's my shadow doing?\"<br>\u2022 \"Christ Peter, I have a sixth sense, an instinct, why can't you ever trust me?\"<br>\u2022 \"all our tests were done using this, there was actually no model creation done what so ever\"<br>\u2022 \"it didn't even occur to me to be scared\"<br>\u2022 \"I want to go back to the blue room\"<br>\u2022 \"I guess you guys don't go out much\"<br>\u2022 \"there was a perfect place\"<br>\u2022 \"we're all part of it whether we're conscious of it or not\"<br>\u2022 \"I think always, suppose I fail?\""
+    "description": "Aaaaaaaaand we're back!<br><br>After a small hiatus, I have joined forces with my long-time friend and fellow music hoarder <a href='https://www.youtube.com/@cosmicbabies' target='_blank' style='color: #00ff00; text-decoration: underline;'>Generator</a>.<br><br>Together we have conjured a 2 and a half hour dark trip, shoutout to all those who have listened to my mixes in the past and have brought to light the tunes that would have been lost to time. You know who you are ;)<br><br>Feel free to play the sample bingo as you listen :)<br><br>• \"I guess you guys don't go out much\"<br>• \"we decided to make it female so that it would be more docile and controllable\"<br>• \"sometimes I wonder what keeps me ticking\"<br>• \"what the hell's my shadow doing?\"<br>• \"Christ Peter, I have a sixth sense, an instinct, why can't you ever trust me?\"<br>• \"all our tests were done using this, there was actually no model creation done what so ever\"<br>• \"it didn't even occur to me to be scared\"<br>• \"I want to go back to the blue room\"<br>• \"I guess you guys don't go out much\"<br>• \"there was a perfect place\"<br>• \"we're all part of it whether we're conscious of it or not\"<br>• \"I think always, suppose I fail?\"",
+    "genres": [
+      "Psychedelic"
+    ]
   },
   {
     "date": "16/02/2024",
@@ -917,7 +938,10 @@
     },
     "tracklist": [],
     "artwork": "freeballin.jpg",
-    "description": "\"Hard to mix on the fly with no cue.\""
+    "description": "\"Hard to mix on the fly with no cue.\"",
+    "genres": [
+      "Psyprog"
+    ]
   },
   {
     "date": "26/12/2023",
@@ -928,88 +952,91 @@
     },
     "tracklist": [
       {
-        "time": "00:00",
+        "time": "0:00:00",
         "artist": "Kezo Moon",
         "title": "Energy Planet (2023)"
       },
       {
-        "time": "02:58",
+        "time": "0:02:58",
         "artist": "Kezo Moon",
         "title": "Aeon Flux (2023)"
       },
       {
-        "time": "04:32",
+        "time": "0:04:32",
         "artist": "Inverted World & Amorfo Sounds",
         "title": "Visions To The Future (2023)"
       },
       {
-        "time": "06:21",
+        "time": "0:06:21",
         "artist": "Sideways People",
         "title": "Endosymbiosis (2023)"
       },
       {
-        "time": "11:03",
+        "time": "0:11:03",
         "artist": "Kick21",
         "title": "Bottles of Cursed Water (2023)"
       },
       {
-        "time": "14:45",
+        "time": "0:14:45",
         "artist": "Moisk",
         "title": "Kak kogdato (2023)"
       },
       {
-        "time": "18:27",
+        "time": "0:18:27",
         "artist": "Pletnev",
         "title": "Red Nails Black Lips (2023)"
       },
       {
-        "time": "20:51",
+        "time": "0:20:51",
         "artist": "Nats",
         "title": "Flutter (2023)"
       },
       {
-        "time": "25:40",
+        "time": "0:25:40",
         "artist": "[Unknown Artist]",
         "title": "Motunda (2023)"
       },
       {
-        "time": "27:57",
+        "time": "0:27:57",
         "artist": "DJ SWISHERMAN",
         "title": "PUSHIN' KEYS (2023)"
       },
       {
-        "time": "30:48",
+        "time": "0:30:48",
         "artist": "Iro Aka",
         "title": "Void Index (2023)"
       },
       {
-        "time": "35:28",
+        "time": "0:35:28",
         "artist": "Cristofeu",
         "title": "Hit (2023)"
       },
       {
-        "time": "38:08",
+        "time": "0:38:08",
         "artist": "MYKI",
         "title": "Vermountia (2023)"
       },
       {
-        "time": "42:52",
+        "time": "0:42:52",
         "artist": "HyperionORBIT",
         "title": "Forcedentry (2023)"
       },
       {
-        "time": "46:12",
+        "time": "0:46:12",
         "artist": "Alpha Tracks",
         "title": "Sour Streamers (2023)"
       },
       {
-        "time": "48:24",
+        "time": "0:48:24",
         "artist": "Alpha Tracks",
         "title": "June/03 (2023)"
       }
     ],
     "artwork": "modern_trance.jpg",
-    "description": "\"Everyone knows psytrance sucks these days, even still I threw some bits that were actually alright from this year.\""
+    "description": "\"Everyone knows psytrance sucks these days, even still I threw some bits that were actually alright from this year.\"",
+    "genres": [
+      "Psytrance"
+    ]
   },
   {
     "date": "16/06/2023",
@@ -1020,133 +1047,136 @@
     },
     "tracklist": [
       {
-        "time": "00:00",
+        "time": "0:00:00",
         "artist": "Morphem",
         "title": "Twin Towers [2002]"
       },
       {
-        "time": "02:11",
+        "time": "0:02:11",
         "artist": "Necton",
         "title": "Bob On Acid [2002]"
       },
       {
-        "time": "05:14",
+        "time": "0:05:14",
         "artist": "Morphem",
         "title": "Twin Towers [2002]"
       },
       {
-        "time": "07:14",
+        "time": "0:07:14",
         "artist": "Insane Creation",
         "title": "Te Fool [2003]"
       },
       {
-        "time": "08:38",
+        "time": "0:08:38",
         "artist": "Molecular",
         "title": "Feel The Heat [2002]"
       },
       {
-        "time": "11:17",
+        "time": "0:11:17",
         "artist": "Frogacult",
         "title": "All Seasons [2004]"
       },
       {
-        "time": "14:19",
+        "time": "0:14:19",
         "artist": "Oszilla",
         "title": "Inside a Computer Program [2003]"
       },
       {
-        "time": "17:19",
+        "time": "0:17:19",
         "artist": "Timetech",
         "title": "Integer Intrigue [2002]"
       },
       {
-        "time": "18:28",
+        "time": "0:18:28",
         "artist": "Frogacult",
         "title": "Lucky Strike [2003]"
       },
       {
-        "time": "21:44",
+        "time": "0:21:44",
         "artist": "Funky Dragon",
         "title": "Starlight [2004]"
       },
       {
-        "time": "23:47",
+        "time": "0:23:47",
         "artist": "Naveen feat. Morphem",
         "title": "Iridescence [1999]"
       },
       {
-        "time": "25:59",
+        "time": "0:25:59",
         "artist": "Axis",
         "title": "Washing (Key Lock Off) [2002]"
       },
       {
-        "time": "28:57",
+        "time": "0:28:57",
         "artist": "Phony Orphants",
         "title": "Chicago Collins [2003]"
       },
       {
-        "time": "30:27",
+        "time": "0:30:27",
         "artist": "Axis",
         "title": "Beta [2002]"
       },
       {
-        "time": "32:45",
+        "time": "0:32:45",
         "artist": "Nyquist",
         "title": "Flatline [2005]"
       },
       {
-        "time": "33:56",
+        "time": "0:33:56",
         "artist": "DJ Nina & Synchro",
         "title": "About Time [2003]"
       },
       {
-        "time": "37:24",
+        "time": "0:37:24",
         "artist": "Echotek",
         "title": "Dynamic [2004]"
       },
       {
-        "time": "39:54",
+        "time": "0:39:54",
         "artist": "Amphasis",
         "title": "Taifun [2000]"
       },
       {
-        "time": "42:28",
+        "time": "0:42:28",
         "artist": "Native Radio",
         "title": "Inconceivable Incedent [2004]"
       },
       {
-        "time": "44:54",
+        "time": "0:44:54",
         "artist": "V Tunes",
         "title": "G-Con [2005]"
       },
       {
-        "time": "48:04",
+        "time": "0:48:04",
         "artist": "Fiction",
         "title": "Indeep [2004]"
       },
       {
-        "time": "51:56",
+        "time": "0:51:56",
         "artist": "Audiomatrixx",
         "title": "Triebwagen [2006]"
       },
       {
-        "time": "53:53",
+        "time": "0:53:53",
         "artist": "Magnetrixx",
         "title": "Tohuwabohu [2003]"
       },
       {
-        "time": "55:43",
+        "time": "0:55:43",
         "artist": "Antix",
         "title": "B.H.D. [2007]"
       },
       {
-        "time": "58:00",
+        "time": "0:58:00",
         "artist": "Nasal Noiz",
         "title": "Rough Random [2003]"
       }
     ],
     "artwork": "25progtrance1hr.jpg",
-    "description": "\"Find out today!\""
+    "description": "\"Find out today!\"",
+    "genres": [
+      "Progressive Trance"
+    ]
   },
   {
     "date": "07/05/2023",
@@ -1157,73 +1187,76 @@
     },
     "tracklist": [
       {
-        "time": "00:00",
+        "time": "0:00:00",
         "artist": "Freq",
         "title": "Life impulse [2004]"
       },
       {
-        "time": "00:42",
+        "time": "0:00:42",
         "artist": "Vibrasphere",
         "title": "Sweet September [2006]"
       },
       {
-        "time": "06:02",
+        "time": "0:06:02",
         "artist": "Freq",
         "title": "Life Impulse [2004]"
       },
       {
-        "time": "06:37",
+        "time": "0:06:37",
         "artist": "Echotek",
         "title": "Bouncing Channels [2003]"
       },
       {
-        "time": "10:59",
+        "time": "0:10:59",
         "artist": "Treibstoff",
         "title": "Nautilus [2002]"
       },
       {
-        "time": "15:58",
+        "time": "0:15:58",
         "artist": "Shiva Chandra",
         "title": "Family [2003]"
       },
       {
-        "time": "20:20",
+        "time": "0:20:20",
         "artist": "S-Range",
         "title": "Out of Range (Noma's Morning Glory Mix) [2005]"
       },
       {
-        "time": "29:20",
+        "time": "0:29:20",
         "artist": "Humate",
         "title": "Love Stimulation (Oliver Lieb Softmix) [1998]"
       },
       {
-        "time": "35:58",
+        "time": "0:35:58",
         "artist": "Rigson",
         "title": "U ask I tell [2022]"
       },
       {
-        "time": "40:18",
+        "time": "0:40:18",
         "artist": "DJ Preach",
         "title": "Oxygen Enhanced [2006]"
       },
       {
-        "time": "44:19",
+        "time": "0:44:19",
         "artist": "The Muses Rapt",
         "title": "Spiritual Healing (Darshan Remix)"
       },
       {
-        "time": "51:20",
+        "time": "0:51:20",
         "artist": "Magnetrixx",
         "title": "Spazmolyt [2001]"
       },
       {
-        "time": "54:35",
+        "time": "0:54:35",
         "artist": "P.O.T.S",
         "title": "Maxi Meier [2002]"
       }
     ],
     "artwork": "maximalisttrance.jpg",
-    "description": "Decided to throw in some tracks with slightly bigger overtures, breakdowns and weird guitars between #6 - #9, perhaps not to everyone's taste in which case, if not #1  - #5 and #10 - #12 will be the percussive workouts you need"
+    "description": "Decided to throw in some tracks with slightly bigger overtures, breakdowns and weird guitars between #6 - #9, perhaps not to everyone's taste in which case, if not #1  - #5 and #10 - #12 will be the percussive workouts you need",
+    "genres": [
+      "Psychedelic"
+    ]
   },
   {
     "date": "14/04/2023",
@@ -1345,7 +1378,10 @@
       }
     ],
     "artwork": "tribal_mix.jpg",
-    "description": "\"On today's episode of DJing dead genres...\""
+    "description": "\"On today's episode of DJing dead genres...\"",
+    "genres": [
+      "Progressive House"
+    ]
   },
   {
     "date": "05/03/2023",
@@ -1452,7 +1488,10 @@
       }
     ],
     "artwork": "trip_to_progington.jpg",
-    "description": "Fuck you SoundCloud, making me fork out \u00a360 just to upload this shit.<br><br>After collecting old prog-house almost 5 years now it's finally time to put a mix together in probably my favourite genre of all time. Starting heady with some classics, this ends up going deep and dark before coming back up at the end."
+    "description": "Fuck you SoundCloud, making me fork out £60 just to upload this shit.<br><br>After collecting old prog-house almost 5 years now it's finally time to put a mix together in probably my favourite genre of all time. Starting heady with some classics, this ends up going deep and dark before coming back up at the end.",
+    "genres": [
+      "Progressive House"
+    ]
   },
   {
     "date": "14/01/2023",
@@ -1524,7 +1563,10 @@
       }
     ],
     "artwork": "sound_of_whomp.jpg",
-    "description": "Mother of Whomp Party, Annx invites, Norman Khan for the latest \u2018Sound of Whomp\u2019. Expect an hour-long journey paying homage to the minimal/progressive sound exclusively featuring tunes from between the years of 1996-2004. Look out for samples from Toy Story and Office Space, dark room recommended."
+    "description": "Mother of Whomp Party, Annx invites, Norman Khan for the latest ‘Sound of Whomp’. Expect an hour-long journey paying homage to the minimal/progressive sound exclusively featuring tunes from between the years of 1996-2004. Look out for samples from Toy Story and Office Space, dark room recommended.",
+    "genres": [
+      "Psyprog"
+    ]
   },
   {
     "date": "20/12/2022",
@@ -1626,7 +1668,7 @@
       },
       {
         "time": "01:08:00",
-        "artist": "Rhode & Brown & Benjamin Fr\u00f6hlich",
+        "artist": "Rhode & Brown & Benjamin Fröhlich",
         "title": "Days Of Innocence (Baby Rollen Remix) [2022]"
       },
       {
@@ -1657,7 +1699,7 @@
       {
         "time": "01:35:15",
         "artist": "Buen Clima",
-        "title": "Ninguna Despedida Podr\u00e1 Ser Suficiente [2021]"
+        "title": "Ninguna Despedida Podrá Ser Suficiente [2021]"
       },
       {
         "time": "01:40:30",
@@ -1696,7 +1738,11 @@
       }
     ],
     "artwork": "2022_eoy.jpg",
-    "description": "\"this one is actually fire tbh\"<br><br>Cover art: Pieter Bruegel the Elder - The Triumph of Death (1562)"
+    "description": "\"this one is actually fire tbh\"<br><br>Cover art: Pieter Bruegel the Elder - The Triumph of Death (1562)",
+    "genres": [
+      "NuTrance",
+      "Trance"
+    ]
   },
   {
     "date": "12/10/2022",
@@ -1767,7 +1813,10 @@
         "title": "Life Web [2021]"
       }
     ],
-    "artwork": "spooktober_special.jpg"
+    "artwork": "spooktober_special.jpg",
+    "genres": [
+      "Psychedelic"
+    ]
   },
   {
     "date": "03/09/2022",
@@ -1833,7 +1882,10 @@
         "title": "The Age Of Ent [2021]"
       }
     ],
-    "artwork": "weird_trance_n_shit.jpg"
+    "artwork": "weird_trance_n_shit.jpg",
+    "genres": [
+      "Psychedelic"
+    ]
   },
   {
     "date": "11/06/2022",
@@ -1915,7 +1967,11 @@
       }
     ],
     "description": "Possibly the greatest highlight of my DJ career, playing to around 100 people who had just finished exams and were absolutely buzzing, 40m total but everyone fucking loved it :)",
-    "artwork": "semsu_summer_blowout_uncropped.jpg"
+    "artwork": "semsu_summer_blowout_uncropped.jpg",
+    "genres": [
+      "UKG",
+      "Breakbeat"
+    ]
   },
   {
     "date": "12/02/2022",
@@ -1925,7 +1981,10 @@
       "mixcloud": "https://www.mixcloud.com/nx1/semsu-live-sobar-12_02_2022/"
     },
     "tracklist": [],
-    "artwork": "sobar_poster_12_02_2022_uncropped.jpg"
+    "artwork": "sobar_poster_12_02_2022_uncropped.jpg",
+    "genres": [
+      "Downtempo"
+    ]
   },
   {
     "date": "27/11/2021",
@@ -2002,7 +2061,11 @@
       }
     ],
     "artwork": "sobar_full_a3_black.jpg",
-    "description": "This was a funny one, was peak winter in Southampton and I was playing a set to bridge the gap between the 140 breakbeat stuff to 175 jungle so kinda covered a fair amount of ground, some broken beat stuff, some nutrance and some jungle all in the space of 40m. I remember some old heads walked in off the street and they were really enjoying the mix at the back of the room but there were like 3 girls in my face asking me to place stuff with \"lyrics\" lol"
+    "description": "This was a funny one, was peak winter in Southampton and I was playing a set to bridge the gap between the 140 breakbeat stuff to 175 jungle so kinda covered a fair amount of ground, some broken beat stuff, some nutrance and some jungle all in the space of 40m. I remember some old heads walked in off the street and they were really enjoying the mix at the back of the room but there were like 3 girls in my face asking me to place stuff with \"lyrics\" lol",
+    "genres": [
+      "Jungle",
+      "Experimental"
+    ]
   },
   {
     "date": "11/10/2021",
@@ -2011,7 +2074,10 @@
     "links": {
       "mixcloud": "https://m.mixcloud.com/nx1/weeeeeeeeeeeeeeeee/"
     },
-    "tracklist": []
+    "tracklist": [],
+    "genres": [
+      "Electro"
+    ]
   },
   {
     "date": "11/01/2021",
@@ -2021,7 +2087,11 @@
       "mixcloud": "https://www.mixcloud.com/nx1/11_01_2022-freestyle-electro-and-other-stuff/"
     },
     "tracklist": [],
-    "artwork": "electro_vs_everything_else.jpg"
+    "artwork": "electro_vs_everything_else.jpg",
+    "genres": [
+      "Electro",
+      "Other stuff"
+    ]
   },
   {
     "date": "13/06/2020",
@@ -2048,6 +2118,9 @@
       "14. London Modular Alliance - Fallow [2016]",
       "15. COMPUTER DATA - Schlafen [2018]",
       "16. Kasst - Astral Talk [2019]"
+    ],
+    "genres": [
+      "Deep House"
     ]
   },
   {
@@ -2069,6 +2142,9 @@
       "9. Joris Voorn - Sweep The Floor (Original Mix) [2009]",
       "10. DJ Boring - For Tahn [2018]",
       "11. RUFUS - Underwater [2018]"
+    ],
+    "genres": [
+      "Deep/Prog House"
     ]
   }
 ]
