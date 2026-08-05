@@ -4,10 +4,11 @@ This skill file contains context, architecture details, and Standard Operating P
 
 ## 1. Architecture Overview
 - **Data Source:** `/home/x1/server/mixes/mixes.json` (Parsed dynamically on every request; no server restart required for updates).
-- **Backend Routing:** `/home/x1/server/mixes/routes.py` (Flask Blueprint checking for local files in `static/mixes`).
-- **Frontend Template:** `/home/x1/server/templates/mixes.html` (Custom audio player UI with CSS grid and JS event listeners for playback/seeking).
+- **Backend Routing:** `/home/x1/server/mixes/routes.py` (Flask Blueprint checking for local files in `static/mixes`, including a POST endpoint to record play counts).
+- **Frontend Template:** `/home/x1/server/templates/mixes.html` (Custom audio player UI with CSS grid and JS event listeners for playback, seeking, and logging play counts).
 - **Audio Files:** Stored in `/home/x1/server/static/mixes/`.
 - **Artwork:** Stored in `/home/x1/server/static/mixes/artwork/` (Must be optimized `.jpg` files, 500x500px).
+- **Play Tracking:** Play counts are stored in `/home/x1/server/mixes/plays.json`. This file is ignored by git to keep development/deployment states clean. Play count increments are triggered via a POST request from the frontend JavaScript when a user begins playback (capped to once per page session per track).
 
 ## 2. Standard Operating Procedures (SOPs)
 
@@ -20,9 +21,10 @@ This skill file contains context, architecture details, and Standard Operating P
 3. **Format the Tracklist:** The `tracklist` key must be a list of dictionaries with timestamps. Do not use plain text strings.
    ```json
    "tracklist": [
-     { "time": "00:00:00", "artist": "Artist Name", "title": "Track Title" }
+     { "time": "0:00:00", "artist": "Artist Name", "title": "Track Title" }
    ]
    ```
+4. **Timestamp Formatting:** Always format timestamps using `H:MM:SS` (e.g. `0:00:00`, `0:03:28`, `1:15:45`). Do not use the short `MM:SS` format (e.g. `03:28` or `75:45`) to ensure consistency across all mix tracklists.
 
 ### Artwork Optimization
 Artwork should be compressed JPEGs (not PNGs), but **do not crop them**. They must retain their original aspect ratios. If a new PNG or JPG is provided, optimize it using FFmpeg:

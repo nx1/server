@@ -1,5 +1,261 @@
 [
   {
+    "date": "25/07/2026",
+    "title": "NK b2b Koroc",
+    "file": "nk_b2b_koroc.opus",
+    "links": {},
+    "tracklist": [
+      {
+        "time": "0:00:00",
+        "artist": "Younger Than Me",
+        "title": "Zarathustra Dance (Original Mix) (2024)"
+      },
+      {
+        "time": "0:01:40",
+        "artist": "Dmitry Molosh",
+        "title": "Detektor (2018)"
+      },
+      {
+        "time": "0:08:35",
+        "artist": "Robert Babicz",
+        "title": "Auralphase (Cid Inc. Vs Darin Epsilon Remix) (2015)"
+      },
+      {
+        "time": "0:14:00",
+        "artist": "Addex",
+        "title": "Rumble in the Bronx (2012)"
+      },
+      {
+        "time": "0:18:25",
+        "artist": "Science Dept.",
+        "title": "Persuasion (Danny Howells XX Retouch) (2000)"
+      },
+      {
+        "time": "0:22:00",
+        "artist": "St Germain",
+        "title": "Rose Rouge (Joris Voorn Secret Mix) (2012)"
+      },
+      {
+        "time": "0:26:30",
+        "artist": "808 State",
+        "title": "Pacific State (1989)"
+      },
+      {
+        "time": "0:31:26",
+        "artist": "CAB",
+        "title": "Mischief (2022)"
+      },
+      {
+        "time": "0:36:00",
+        "artist": "Evolution feat. Jayn Hanna",
+        "title": "Walking On Fire (Original Mix) (2002)"
+      },
+      {
+        "time": "0:40:20",
+        "artist": "Vitess",
+        "title": "Highway (DJOKO Remix) (2021)"
+      },
+      {
+        "time": "0:44:07",
+        "artist": "Chaos in the CBD",
+        "title": "Outdoor Limit (2023)"
+      },
+      {
+        "time": "0:46:26",
+        "artist": "Men I Trust",
+        "title": "Break for Lovers (Elinov Edit) (2021)"
+      },
+      {
+        "time": "0:51:30",
+        "artist": "Abdul Raeva",
+        "title": "Basic Contact (2021)"
+      },
+      {
+        "time": "0:56:01",
+        "artist": "Clint",
+        "title": "Alpine Breaks (Alex Kassian Remix) (2022)"
+      },
+      {
+        "time": "1:01:00",
+        "artist": "Pope of Gegga",
+        "title": "Filterpenna (2001)"
+      },
+      {
+        "time": "1:04:22",
+        "artist": "FREq",
+        "title": "Short Life Again (2003)"
+      },
+      {
+        "time": "1:10:10",
+        "artist": "Adam Pits",
+        "title": "Plateau (2026)"
+      },
+      {
+        "time": "1:14:00",
+        "artist": "Bliss Inc.",
+        "title": "Verbs (2025)"
+      },
+      {
+        "time": "1:18:00",
+        "artist": "Jaia",
+        "title": "From Tokyo (2005)"
+      },
+      {
+        "time": "1:24:00",
+        "artist": "Match Box",
+        "title": "Midnight (Bliss Inc. Remix) (2023)"
+      },
+      {
+        "time": "1:29:20",
+        "artist": "Ay\u016b",
+        "title": "In The End (2024)"
+      },
+      {
+        "time": "1:33:00",
+        "artist": "Sleep D",
+        "title": "Gummy Drop (2025)"
+      },
+      {
+        "time": "1:36:00",
+        "artist": "Spray",
+        "title": "Slipped (2023)"
+      },
+      {
+        "time": "1:39:40",
+        "artist": "Mr. Ho",
+        "title": "Ngomee (ft. Xiolin) (2021)"
+      },
+      {
+        "time": "1:44:07",
+        "artist": "Fragments",
+        "title": "Human Safari (2025)"
+      },
+      {
+        "time": "1:51:26",
+        "artist": "Basic Channel",
+        "title": "Phylyps Trak (1996) [EAR RAPE WARNING]"
+      },
+      {
+        "time": "1:56:15",
+        "artist": "DJ SWISHERMAN",
+        "title": "PUSHIN' KEYS (2023)"
+      }
+    ],
+    "artwork": "b2b_koroc_optimized.jpg",
+    "description": "Koroc came to visit London for a quick visit so  we met up for a quick b2b",
+    "genres": [
+      "Freestyle"
+    ]
+  },
+  {
+    "date": "28/06/2026",
+    "title": "freeballin' #2",
+    "file": "freeballin_2.opus",
+    "links": {},
+    "tracklist": [
+      {
+        "time": "0:00:00",
+        "artist": "Nyquist",
+        "title": "Diffuser"
+      },
+      {
+        "time": "0:00:15",
+        "artist": "Magnetrixx",
+        "title": "Warm Rain"
+      },
+      {
+        "time": "0:05:08",
+        "artist": "Vibrasphere",
+        "title": "Lemon Phase"
+      },
+      {
+        "time": "0:11:30",
+        "artist": "Fiction",
+        "title": "Indeep"
+      },
+      {
+        "time": "0:15:26",
+        "artist": "Echotek",
+        "title": "Away (La Baaz rmx)"
+      },
+      {
+        "time": "0:21:02",
+        "artist": "Insane Creation Vs. Shybe",
+        "title": "Goerem"
+      },
+      {
+        "time": "0:24:30",
+        "artist": "Neum",
+        "title": "Deep End (Rmx)"
+      },
+      {
+        "time": "0:27:31",
+        "artist": "Buzzmonx",
+        "title": "Liftingen"
+      },
+      {
+        "time": "0:28:45",
+        "artist": "Flowjob",
+        "title": "Fandango"
+      },
+      {
+        "time": "0:32:36",
+        "artist": "Fabel",
+        "title": "The Bear"
+      },
+      {
+        "time": "0:35:35",
+        "artist": "Feuerhake",
+        "title": "La Aurora"
+      },
+      {
+        "time": "0:37:00",
+        "artist": "New Disco Science Alliance",
+        "title": "Wake Up And Smell The Coffee"
+      },
+      {
+        "time": "0:40:00",
+        "artist": "Saiko Pod",
+        "title": "Phutures (Atmos Remix)"
+      },
+      {
+        "time": "0:41:43",
+        "artist": "Filur",
+        "title": "Kiwi Mint Pilot"
+      },
+      {
+        "time": "0:44:45",
+        "artist": "Space Safari",
+        "title": "Soul"
+      },
+      {
+        "time": "0:50:00",
+        "artist": "Soul Surfer",
+        "title": "Riding The Wave"
+      },
+      {
+        "time": "0:55:48",
+        "artist": "Andromeda",
+        "title": "Twisted Sister"
+      },
+      {
+        "time": "0:58:00",
+        "artist": "Element",
+        "title": "Dakota"
+      },
+      {
+        "time": "1:00:00",
+        "artist": "Gabriel Le Mar",
+        "title": "Story"
+      }
+    ],
+    "artwork": "sleeve_freeballin2.jpg",
+    "description": "Just a chill sunday evening and was in the zone so decided to hit rec :)",
+    "genres": [
+      "Psyprog"
+    ]
+  },
+  {
     "date": "31/05/2026",
     "title": "Norman Khan b2b Generator - Ancient Circuits",
     "file": "Norman Khan b2b generator - Ancient Circuits.opus",
@@ -632,7 +888,7 @@
       },
       {
         "time": "0:34:10",
-        "artist": "Introvert vs. Björk",
+        "artist": "Introvert vs. Bj\u00f6rk",
         "title": "Joga (Breaks Mix) [2004]"
       },
       {
@@ -924,7 +1180,7 @@
       }
     ],
     "artwork": "shadow_dance.jpg",
-    "description": "Aaaaaaaaand we're back!<br><br>After a small hiatus, I have joined forces with my long-time friend and fellow music hoarder <a href='https://www.youtube.com/@cosmicbabies' target='_blank' style='color: #00ff00; text-decoration: underline;'>Generator</a>.<br><br>Together we have conjured a 2 and a half hour dark trip, shoutout to all those who have listened to my mixes in the past and have brought to light the tunes that would have been lost to time. You know who you are ;)<br><br>Feel free to play the sample bingo as you listen :)<br><br>• \"I guess you guys don't go out much\"<br>• \"we decided to make it female so that it would be more docile and controllable\"<br>• \"sometimes I wonder what keeps me ticking\"<br>• \"what the hell's my shadow doing?\"<br>• \"Christ Peter, I have a sixth sense, an instinct, why can't you ever trust me?\"<br>• \"all our tests were done using this, there was actually no model creation done what so ever\"<br>• \"it didn't even occur to me to be scared\"<br>• \"I want to go back to the blue room\"<br>• \"I guess you guys don't go out much\"<br>• \"there was a perfect place\"<br>• \"we're all part of it whether we're conscious of it or not\"<br>• \"I think always, suppose I fail?\"",
+    "description": "Aaaaaaaaand we're back!<br><br>After a small hiatus, I have joined forces with my long-time friend and fellow music hoarder <a href='https://www.youtube.com/@cosmicbabies' target='_blank' style='color: #00ff00; text-decoration: underline;'>Generator</a>.<br><br>Together we have conjured a 2 and a half hour dark trip, shoutout to all those who have listened to my mixes in the past and have brought to light the tunes that would have been lost to time. You know who you are ;)<br><br>Feel free to play the sample bingo as you listen :)<br><br>\u2022 \"I guess you guys don't go out much\"<br>\u2022 \"we decided to make it female so that it would be more docile and controllable\"<br>\u2022 \"sometimes I wonder what keeps me ticking\"<br>\u2022 \"what the hell's my shadow doing?\"<br>\u2022 \"Christ Peter, I have a sixth sense, an instinct, why can't you ever trust me?\"<br>\u2022 \"all our tests were done using this, there was actually no model creation done what so ever\"<br>\u2022 \"it didn't even occur to me to be scared\"<br>\u2022 \"I want to go back to the blue room\"<br>\u2022 \"I guess you guys don't go out much\"<br>\u2022 \"there was a perfect place\"<br>\u2022 \"we're all part of it whether we're conscious of it or not\"<br>\u2022 \"I think always, suppose I fail?\"",
     "genres": [
       "Psychedelic"
     ]
@@ -1488,7 +1744,7 @@
       }
     ],
     "artwork": "trip_to_progington.jpg",
-    "description": "Fuck you SoundCloud, making me fork out £60 just to upload this shit.<br><br>After collecting old prog-house almost 5 years now it's finally time to put a mix together in probably my favourite genre of all time. Starting heady with some classics, this ends up going deep and dark before coming back up at the end.",
+    "description": "Fuck you SoundCloud, making me fork out \u00a360 just to upload this shit.<br><br>After collecting old prog-house almost 5 years now it's finally time to put a mix together in probably my favourite genre of all time. Starting heady with some classics, this ends up going deep and dark before coming back up at the end.",
     "genres": [
       "Progressive House"
     ]
@@ -1563,7 +1819,7 @@
       }
     ],
     "artwork": "sound_of_whomp.jpg",
-    "description": "Mother of Whomp Party, Annx invites, Norman Khan for the latest ‘Sound of Whomp’. Expect an hour-long journey paying homage to the minimal/progressive sound exclusively featuring tunes from between the years of 1996-2004. Look out for samples from Toy Story and Office Space, dark room recommended.",
+    "description": "Mother of Whomp Party, Annx invites, Norman Khan for the latest \u2018Sound of Whomp\u2019. Expect an hour-long journey paying homage to the minimal/progressive sound exclusively featuring tunes from between the years of 1996-2004. Look out for samples from Toy Story and Office Space, dark room recommended.",
     "genres": [
       "Psyprog"
     ]
@@ -1668,7 +1924,7 @@
       },
       {
         "time": "01:08:00",
-        "artist": "Rhode & Brown & Benjamin Fröhlich",
+        "artist": "Rhode & Brown & Benjamin Fr\u00f6hlich",
         "title": "Days Of Innocence (Baby Rollen Remix) [2022]"
       },
       {
@@ -1699,7 +1955,7 @@
       {
         "time": "01:35:15",
         "artist": "Buen Clima",
-        "title": "Ninguna Despedida Podrá Ser Suficiente [2021]"
+        "title": "Ninguna Despedida Podr\u00e1 Ser Suficiente [2021]"
       },
       {
         "time": "01:40:30",

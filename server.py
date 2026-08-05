@@ -4,6 +4,7 @@ from digger import app as digger_app
 #from skybouncer import app as skybouncer_app
 from inspector import app as inspector_app
 from mixes import app as mixes_app
+from tracks import app as tracks_app
 
 
 class Server:
@@ -22,6 +23,7 @@ class Server:
         #self.app.register_blueprint(skybouncer_app, url_prefix='/skybouncer')
         self.app.register_blueprint(inspector_app,  url_prefix='/inspector')
         self.app.register_blueprint(mixes_app,      url_prefix='/mixes')
+        self.app.register_blueprint(tracks_app,     url_prefix='/tracks')
 
     def run(self):
         self.app.run(host='0.0.0.0', port=5000, debug=True)

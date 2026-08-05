@@ -338,6 +338,11 @@
   <img src="{{ url_for('static', filename='mixes/artwork/sc_banner.jpg') }}" class="sc-banner-img" alt="nx1 banner">
 </div>
 
+<div style="text-align: center; font-family: monospace; margin-bottom: 20px;">
+  <a href="{{ url_for('mixes.index') }}" style="color: #00ff00; text-decoration: none; font-weight: bold; margin: 0 15px;">DJ Mixes</a> | 
+  <a href="{{ url_for('tracks.index') }}" style="color: #888; text-decoration: none; margin: 0 15px;">Tracks</a>
+</div>
+
 <div class="mix-list">
 {% if mixes %}
   {% for mix in mixes -%}

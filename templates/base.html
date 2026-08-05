@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block page_title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
 </head>
 <body>
 <pre><h1><a href="{{ url_for('index') }}" style="color: inherit; text-decoration: none;">nx1.info</a>{% block page_title_suffix %}{% endblock %}</h1></pre>

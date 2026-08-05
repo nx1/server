@@ -22,7 +22,7 @@ def inspect(package_name):
         module_name = module.__name__
         for k, v in module.__dict__.items():
             res = {"module_name"   : module_name,
-                   "module"     : module,
+                   "module"        : module,
                    "k"             : k,
                    "v"             : v}
             all_res.append(res)
